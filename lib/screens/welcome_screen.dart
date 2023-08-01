@@ -1,10 +1,8 @@
-import 'package:anime_description_v1/decorations/background.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:anime_description_v1/decorations/gradient_colors.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({delay = 3, super.key});
+  const WelcomeScreen({super.key});
 
   @override
   State<StatefulWidget> createState() => _WelcomeScreenState();
@@ -13,8 +11,8 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(context) {
-    return BackGround(
-      decoration: GradientColors().gradientsColors,
+    return Container(
+      color: const Color.fromARGB(250, 15, 15, 15),
       padding: const EdgeInsets.only(top: 200),
       child: Center(
         child: Column(
@@ -44,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               height: 200,
             ),
             const CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
             )
           ],
         ),

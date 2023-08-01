@@ -1,5 +1,4 @@
 import 'package:anime_description_v1/screens/all_screen.dart';
-import 'package:anime_description_v1/decorations/background.dart';
 import 'package:anime_description_v1/screens/favorite_screen.dart';
 import 'package:anime_description_v1/screens/home_screen.dart';
 import 'package:anime_description_v1/screens/search_screen.dart';
@@ -35,7 +34,7 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 41, 72, 97),
+        backgroundColor: const Color.fromARGB(248, 24, 24, 24),
         title: Text(
           'AnimeVerse Beta V_0.0.10',
           style: GoogleFonts.lato(
@@ -46,7 +45,7 @@ class _MenuScreenState extends State<MenuScreen> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: const Color.fromARGB(255, 41, 72, 97),
+        backgroundColor: const Color.fromARGB(248, 24, 24, 24),
         width: 250,
         child: ListView(
           // padding: EdgeInsets.zero,
@@ -55,7 +54,7 @@ class _MenuScreenState extends State<MenuScreen> {
               height: 70,
               child: DrawerHeader(
                 decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 41, 72, 97),
+                  color: Color.fromARGB(248, 24, 24, 24),
                 ),
                 child: Text(
                   'Menu Header',
@@ -68,24 +67,42 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
+              leading: const Icon(
+                Icons.home,
+                color: Colors.grey,
+              ),
+              title: const Text(
+                'Home',
+                style: TextStyle(color: Colors.white),
+              ),
               onTap: () {
                 // Add functionality to handle 'Home' item tap here
                 Navigator.pop(context); // Close the drawer
               },
             ),
             ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Settings'),
+              leading: const Icon(
+                Icons.settings,
+                color: Colors.grey,
+              ),
+              title: const Text(
+                'Settings',
+                style: TextStyle(color: Colors.white),
+              ),
               onTap: () {
                 // Add functionality to handle 'Settings' item tap here
                 Navigator.pop(context); // Close the drawer
               },
             ),
             ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text('About'),
+              leading: const Icon(
+                Icons.info,
+                color: Colors.grey,
+              ),
+              title: const Text(
+                'About',
+                style: TextStyle(color: Colors.white),
+              ),
               onTap: () {
                 // Add functionality to handle 'About' item tap here
                 Navigator.pop(context); // Close the drawer
@@ -94,35 +111,45 @@ class _MenuScreenState extends State<MenuScreen> {
           ],
         ),
       ),
-      body: BackGround(
-        child: screens[selectedIndex],
-      ),
+      body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         onTap: onTabTapped,
-        selectedItemColor: Colors.blue, // Customize the color for selected item
-        unselectedItemColor:
-            Colors.black, // Customize the color for unselected items
+        selectedItemColor: Colors.red, // Customize the color for selected item
+        // unselectedItemColor:
+        //     Colors.black, // Customize the color for unselected items
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.grey,
+            ),
             label: 'Home',
-            backgroundColor: Color.fromARGB(255, 41, 72, 97),
+            backgroundColor: Color.fromARGB(248, 24, 24, 24),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color: Colors.grey,
+            ),
             label: 'Search',
-            backgroundColor: Color.fromARGB(255, 41, 72, 97),
+            backgroundColor: Color.fromARGB(248, 24, 24, 24),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Icon(
+              Icons.star,
+              color: Colors.grey,
+            ),
             label: 'Favorite',
-            backgroundColor: Color.fromARGB(255, 41, 72, 97),
+            backgroundColor: Color.fromARGB(248, 24, 24, 24),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
+            icon: Icon(
+              Icons.list,
+              color: Colors.grey,
+            ),
             label: 'All',
-            backgroundColor: Color.fromARGB(255, 41, 72, 97),
+            backgroundColor: Color.fromARGB(248, 24, 24, 24),
           ),
         ],
       ),

@@ -1,4 +1,3 @@
-import 'package:anime_description_v1/decorations/background.dart';
 import 'package:flutter/material.dart';
 
 class AllScreen extends StatefulWidget {
@@ -13,8 +12,8 @@ class AllScreen extends StatefulWidget {
 class _AllScreenState extends State<AllScreen> {
   @override
   Widget build(BuildContext context) {
-    return const BackGround(
-      child: null,
+    return Container(
+      color: const Color.fromARGB(250, 15, 15, 15),
     );
   }
 }
