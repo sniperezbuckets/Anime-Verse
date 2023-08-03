@@ -8,6 +8,8 @@ class WelcomeScreen extends StatefulWidget {
   State<StatefulWidget> createState() => _WelcomeScreenState();
 }
 
+/*This is how the welcome screen looks. It's sample Widget tree for the screen
+interface*/
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(context) {
